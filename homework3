@@ -97,17 +97,10 @@ on pc.ProductCategoryID=ps.ProductCategoryID;
 -- 1492    Australia Bike Retailer    Eric    Kurjan    eric2@adventure-works.com
 -- 1492    Australia Bike Retailer    Erin    Hagens    erin0@adventure-works.com
 
-select distinct
+select
 pv.BusinessEntityID,
-pv.Name VendorName,
-pp.FirstName,
-pp.LastName,
-pe.EmailAddress
+pv.Name VendorName
 
 from Purchasing.Vendor pv
-join Purchasing.PurchaseOrderHeader ph
-on pv.BusinessEntityID=ph.VendorID
-join Person.Person pp
-on ph.EmployeeID=pp.BusinessEntityID
-join Person.EmailAddress pe
-on pp.BusinessEntityID=pe.BusinessEntityID
+
+...pauza :)
